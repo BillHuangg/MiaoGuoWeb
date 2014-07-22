@@ -7,7 +7,9 @@ body {
 	line-height:1;
 	position:relative;
 	cursor:default;
-	background:#efeee4
+	background:#efeee4;
+
+	/*border:5px solid #6ef1b5;*/
 }
 .margintop {
 	margin-top:90px
@@ -40,7 +42,7 @@ code {
 	padding:138px 0 0;
 	text-align:center;
 	min-height:771px;
-	position:relative
+	position:relative;
 }
 .logoimg {
 	position:absolute;
