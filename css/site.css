@@ -18,9 +18,9 @@ iframe {
 	border:0;
 	width:100%
 }
-a:hover {
+/*a:hover {
 	color:#000
-}
+}*/
 code {
 	font-family:courier,Georgia,Serif;
 	font-weight:400;
@@ -328,9 +328,7 @@ footer {
 	position:relative;
 	height:105px
 }
-a.thumbnail:hover,a.thumbnail:focus,a.thumbnail.active {
-	border-color:#777
-}
+
 .home-template .post,.archive-template .post {
 	position:relative;
 	margin-bottom:30px;
