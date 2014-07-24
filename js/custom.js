@@ -49,8 +49,8 @@ jQuery(document).ready(function ($) {
 
 	$(".navigationContainer").mouseleave(function(){
 		$("#firstPage").css("background-image","url(Resources/firstPageBG.png)");
-		// $(".navigationContainer").removeClass("circleBorder");
-		// $(".navigationList").hide();
+		$(".navigationContainer").removeClass("circleBorder");
+		$(".navigationList").hide();
 	});
 
 

@@ -83,53 +83,75 @@ body {
 }
 
 .navigationList{
+	width: 231px;
+
 	list-style-type:none;  
 	padding: 0;
 }
 
-.horizontalList{
-	margin-left: 10px;
-	margin-top: -100px;
-}
-
-.horizontalList li{
-	float:left;
-}
-
-.horizontalList li:first-child{
-	margin-right: 100px;
-}
-
-.verticalList{
-	margin-left: 85px;
-	margin-top: -190px;
-}
-.verticalList li:first-child{
-	margin-bottom: 120px;
-	/*width: 30px;*/
-}
-.verticalList li:first-child a{
-	/*text-align: center;*/
-}
-
-.verticalList li:last-child a{
-	/*margin-top: 20px;*/
-	/*text-align: center;*/
-
-}
-
-.navigationList li{
-}
-
 .navigationList li a{
 	color: #000000;
+	font-size: 15px;
 	font-family: 'OratorStd';
+	/*word-spacing: 0.1mm;*/
 }
 
 .navigationList li a:hover{
 	color: #ffffff;
 	text-decoration: none;
 }
+
+.horizontalList{
+	/*margin-left: 10px;*/
+	margin-top: -90px;
+}
+
+.horizontalList li{
+	/*float:left;*/
+	text-align: center;
+
+}
+
+.horizontalList li:first-child{
+	margin-left: -148px;
+}
+
+.horizontalList li:first-child a{
+	letter-spacing: -1.5pt;
+}
+
+.horizontalList li:last-child{
+	margin-left: 140px;
+	margin-top: -16px;
+}
+
+.horizontalList li:last-child a{
+	letter-spacing: -0.7pt;
+}
+
+.verticalList{
+	margin-top: -200px;
+}
+
+.verticalList li{
+	text-align: center;
+
+}
+
+.verticalList li:first-child{
+	margin-bottom: 110px;
+	/*margin-left: 95.5px;*/
+	/*width: 40px;*/
+}
+
+.verticalList li:first-child a{
+	letter-spacing: -0.7pt;
+}
+
+.verticalList li:last-child a{
+	letter-spacing: -1.1pt;
+}
+
 
 
 /*All the part box background*/
