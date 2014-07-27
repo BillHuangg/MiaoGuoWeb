@@ -180,7 +180,7 @@ body {
 	padding:138px 0 0;
 	text-align:center;
 	/*background-size: 100%;*/
-	min-height:770px;
+	height:770px;
 	position:relative;
 }
 
@@ -192,10 +192,10 @@ body {
 	padding:138px 0 0;
 	text-align:center;
 	/*background-size: 100%;*/
-	min-height:770px;
+	height:770px;
 	position:relative;
 	background-color: transparent;
-	margin-top: -770px;
+	/*margin-top: -770px;*/
 }
 
 .backgroundBlur{
@@ -233,7 +233,7 @@ body {
 .logotxt h1{
 	margin-bottom: 0px;
 }
-.logotxt h1 a{
+.logotxt h1 .title{
 	background-color: #6ef1b5;
 	color: #000000;
 	text-decoration: none;
@@ -241,12 +241,16 @@ body {
 	font-family: 'OratorStd';
 }
 
-.titleLetterSpace::before,
+.titleLetterSpace{
+	padding: 16px 16px 0px 16px;
+}
+
+/*.titleLetterSpace::before,
 .titleLetterSpace::after {
 	content: ".";
     visibility: hidden;
     font-size: 25px;
-}
+}*/
 
 
 /*.txtBG{

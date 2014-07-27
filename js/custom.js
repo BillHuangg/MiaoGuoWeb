@@ -45,7 +45,8 @@ jQuery(document).ready(function ($) {
 		else if (windowHeight > 900) {
 			windowHeight = 900;
 		}
-		$(".backgroundBox").css("min-height", windowHeight + "px");
+		$(".backgroundBox").css("height", windowHeight + "px");
+		$(".contentBox").css("height", windowHeight + "px");
 		$(".contentBox").css("margin-top", "-" + windowHeight + "px");
 	}
 
