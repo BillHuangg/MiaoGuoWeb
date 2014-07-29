@@ -12,7 +12,7 @@ body {
 
 /*Font*/
 @font-face { 
-	font-family: 'OratorStd'; 
+	font-family: 'NewOratorStd'; 
 	src: url('../Resources/fonts/OratorStd.otf') format('opentype'); 
 } 
 
@@ -111,7 +111,7 @@ body {
 .navigationList li a{
 	color: #000000;
 	font-size: 15px;
-	font-family: 'OratorStd';
+	font-family: 'NewOratorStd';
 	/*word-spacing: 0.1mm;*/
 }
 
@@ -238,7 +238,7 @@ body {
 	color: #000000;
 	text-decoration: none;
 	font-size: 56px;
-	font-family: 'OratorStd';
+	font-family: 'NewOratorStd';
 }
 
 .titleLetterSpace{
@@ -357,7 +357,7 @@ body {
 
 .iconTitle{
 	font-size: 16px;
-	font-family: 'OratorStd';
+	font-family: 'NewOratorStd';
 	margin-top: 8px;
 	font-weight: 100;
 }
@@ -462,7 +462,7 @@ body {
 
 .memberContainer a h5{
 	font-size: 16px;
-	font-family: 'OratorStd';
+	font-family: 'NewOratorStd';
 	margin-top: 8px;
 	font-weight: 100;
 
@@ -486,7 +486,7 @@ body {
 	padding: 5px 6px 0px 6px;
 
 	font-size: 16px;
-	font-family: 'OratorStd';
+	font-family: 'NewOratorStd';
 	font-weight: 100;
 	font-size: 16px;
 	color: #000000;
@@ -553,17 +553,31 @@ body {
 
 .blockContainer:hover .titleContainer{
 	background-color: #ffffff; 
+
+	width: 146px;
+	height: 146px;
+	margin-left: -73px;
+	margin-top: -73px;
+	-moz-border-radius: 73px; 
+	-webkit-border-radius: 73px; 
+	border-radius: 73px; 
+
 }
 
 .blockContainer:hover .FPtitle{
 	color: #6ef1b5;
+
+	height:146px;
+  	line-height:156px;
+  	font-size: 20px;
+
 }
 
 .FPtitle{
 	margin-top: 0px;
 	height:134px;
   	line-height:144px;
-  	font-family: 'OratorStd';
+  	font-family: 'NewOratorStd';
   	font-size: 19px;
   	color: #000000;
 }
@@ -594,7 +608,7 @@ body {
 	padding: 4px 0px;
 }
 .titleList li a{
-  	font-family: 'OratorStd';
+  	font-family: 'NewOratorStd';
   	font-size: 14px;
   	color: #ffffff;
 }
@@ -688,7 +702,7 @@ body {
 	margin-bottom: 0px;
 
 	font-size: 16px;
-	font-family: 'OratorStd';
+	font-family: 'NewOratorStd';
 	
 	font-weight: 100;
 }
@@ -812,7 +826,7 @@ body {
 	margin-left: -67px;
 	margin-top: -20px;
 
-  	font-family: 'OratorStd';
+  	font-family: 'NewOratorStd';
   	font-size: 19px;
   	color: #000000;
   	text-align: center;
@@ -833,7 +847,7 @@ body {
 	margin-left: -67px;
 	margin-top: 22px;
 
-  	font-family: 'OratorStd';
+  	font-family: 'NewOratorStd';
   	font-size: 15px;
   	color: #ffffff;
   	text-align: center;
@@ -869,7 +883,7 @@ body {
 	padding: 80px 100px;
 	color: #6ef1b5;
 	font-size: 15px;
-	font-family: 'OratorStd';
+	font-family: 'NewOratorStd';
 }
 
 .workSubTitle:hover{
