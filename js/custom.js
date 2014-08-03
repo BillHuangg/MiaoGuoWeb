@@ -33,6 +33,9 @@ jQuery(document).ready(function ($) {
 
 		// Part 6
 		setWorksGroupBlockSize();
+
+		// Test Work Page Size
+		resetWorkPage();
 	}
 
 	// Background Background Image Reset
@@ -68,14 +71,14 @@ jQuery(document).ready(function ($) {
 		//$(".logoBox").css("margin","0");
 		$(".navigationList").show();
 
-		$("#firstPageBG").addClass("backgroundBlur");
+		//$("#firstPageBG").addClass("backgroundBlur");
 	});
 
 	$(".navigationContainer").mouseleave(function(){
 		//$("#firstPage").css("background-image","url(Resources/firstPageBG.jpg)");
 		$(".navigationContainer").removeClass("circleBorder");
 		$(".navigationList").hide();
-		$("#firstPageBG").removeClass("backgroundBlur");
+		//$("#firstPageBG").removeClass("backgroundBlur");
 
 	});
 
@@ -112,8 +115,8 @@ jQuery(document).ready(function ($) {
 	$(".iconContainer").mouseenter(function(){
 
 		//$("#secondPage").css("background-image","url(Resources/secondPageBG_blur.jpg)");
-		$("#secondPageBG").addClass("backgroundBlur");
-		$("#secondPageBG").removeClass("outBlur");
+		//$("#secondPageBG").addClass("backgroundBlur");
+		//$("#secondPageBG").removeClass("outBlur");
 
 		// img
 		$(this).children("a").children(".clickedIcon").css("display","inline-block");
@@ -126,8 +129,8 @@ jQuery(document).ready(function ($) {
 	$(".iconContainer").mouseleave(function(){
 
 		//$("#secondPage").css("background-image","url(Resources/secondPageBG.jpg)");
-		$("#secondPageBG").removeClass("backgroundBlur");
-		$("#secondPageBG").addClass("outBlur");
+		//$("#secondPageBG").removeClass("backgroundBlur");
+		//$("#secondPageBG").addClass("outBlur");
 
 		// img
 		$(this).children("a").children(".clickedIcon").css("display","none");
@@ -151,17 +154,17 @@ jQuery(document).ready(function ($) {
 			$(".members").css("width","800");
 		}
 	}
-	$(".memberContainer").mouseenter(function(){
-		$("#thirdPageBG").addClass("backgroundBlur");
-		$("#thirdPageBG").removeClass("outBlur");
+	// $(".memberContainer").mouseenter(function(){
+	// 	$("#thirdPageBG").addClass("backgroundBlur");
+	// 	$("#thirdPageBG").removeClass("outBlur");
 
-	});
+	// });
 
-	$(".memberContainer").mouseleave(function(){
-		$("#thirdPageBG").removeClass("backgroundBlur");
-		$("#thirdPageBG").addClass("outBlur");
+	// $(".memberContainer").mouseleave(function(){
+	// 	$("#thirdPageBG").removeClass("backgroundBlur");
+	// 	$("#thirdPageBG").addClass("outBlur");
 
-	});
+	// });
 
 
 	//********************************** Part 4 **********************************//
@@ -266,6 +269,20 @@ jQuery(document).ready(function ($) {
 	});
 
 	
+
+	// //********************************** Test: WorkPage **********************************//
+	// function resetWorkPage(){
+	// 	var windowWidth = $(window).width();
+
+	// 	if (windowWidth < 1200) {
+	// 		windowWidth = 1200;
+	// 	}
+
+	// 	var pageHeight = 3332 / 1200 * windowWidth;
+		
+	// 	$("#work_1_Page").css("width", windowWidth + "px");
+	// 	$("#work_1_Page").css("height", pageHeight + "px");
+	// }
 
 
 });

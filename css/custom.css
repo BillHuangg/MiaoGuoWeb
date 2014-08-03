@@ -73,8 +73,8 @@ body {
 	position: fixed;
 
 	/*top: 280px;*/
-	left: 50%;
-	margin-left: -115px;
+	left: 10px;
+	/*margin-left: -115px;*/
 	bottom: 10px;
 	width: 231px;
 	height: 231px;
@@ -242,7 +242,7 @@ body {
 }
 
 .titleLetterSpace{
-	padding: 16px 16px 0px 16px;
+	padding: 4px 16px 0px 16px;
 }
 
 /*.titleLetterSpace::before,
@@ -890,3 +890,15 @@ body {
 	color: #6ef1b5;
 	text-decoration: none;
 }
+
+
+
+
+
+
+#embedVideo{
+
+}
+
+
+
