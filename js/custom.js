@@ -1,9 +1,12 @@
 //  
 jQuery(document).ready(function ($) {
 	
+	var part2Animated = false;
+	var part6Animated = false;
+
+
 	//********************************** init **********************************//
 	$(".navigationList").hide();
-
 
 	//********************************** element response **********************************//
 	$(window).load(reset);
@@ -35,8 +38,36 @@ jQuery(document).ready(function ($) {
 		setWorksGroupBlockSize();
 
 		// Test Work Page Size
-		resetWorkPage();
+		// resetWorkPage();
 	}
+
+	$(document).scroll(function(){
+    	var documentTop = $(document).scrollTop();
+    	var windowHeight = $(window).height();
+		if (windowHeight < 770) {
+			windowHeight = 770;
+		}
+		else if (windowHeight > 900) {
+			windowHeight = 900;
+		}
+
+    	// var iconContainerOffsetTop = $(".iconContainer").offset().top;
+
+    	if (documentTop >= windowHeight * .6) {
+    		if (!part2Animated) {
+    			animationIconContainer();
+    			part2Animated = true;
+    		}
+    	}
+    	
+    	if(documentTop >= windowHeight * .6 + 4 * windowHeight)
+    	{    		
+    		if (!part6Animated) {
+    			animationContactContainer();
+    			part6Animated = true;
+    		}
+    	}
+	});
 
 	// Background Background Image Reset
 	function ResetBackgroudBox()
@@ -82,6 +113,14 @@ jQuery(document).ready(function ($) {
 
 	});
 
+	$(".navigationList li a").click(function(){
+        var hr = $(this).attr("content");
+        var distance = $(hr).offset().top;
+        // var absDistance = Math.abs(distance);
+        // var moveTime = 999990 * 1 / absDistance;
+        $("html,body").stop().animate({scrollTop:distance},800);
+    });
+
 
 	//********************************** Part 1 **********************************//
 	function setTitleDisplayEffect(){
@@ -124,6 +163,11 @@ jQuery(document).ready(function ($) {
 
 		// background
 		$(this).css("background-color", "#ffffff");
+
+		if ($(this).hasClass("iconContainerHover")) {
+			$(this).css("margin-bottom","13px");
+			$(this).css("margin-top","13px");
+		}
 	});
 
 	$(".iconContainer").mouseleave(function(){
@@ -138,7 +182,21 @@ jQuery(document).ready(function ($) {
 
 		// backgroud
 		$(this).css("background-color", "#6ef1b5");
+
+		if ($(this).hasClass("iconContainerHover")) {
+			$(this).css("margin-bottom","18px");
+			$(this).css("margin-top","18px");
+		}
 	});
+
+	function animationIconContainer(){
+		var iconContainers = $(".icons").children();
+		for (var i = 0; i < iconContainers.length; i++) {
+			iconContainers.eq(i).delay(200 + i * 60).animate({marginTop:'18px'},600,function(){
+				$(this).addClass("iconContainerHover");
+			});
+		}
+	}
 
 	//********************************** Part 3 **********************************//
 
@@ -205,9 +263,6 @@ jQuery(document).ready(function ($) {
 	});
 
 	//********************************** Part 5 **********************************//
-
-
-	//********************************** Part 6 **********************************//
 	function setWorksGroupBlockSize(){
 		var windowWidth = $(window).width();
 		var limitation = 584;
@@ -268,7 +323,14 @@ jQuery(document).ready(function ($) {
 		$(this).parent().children(".workGroupContainer").not(this).children(".blackMask").removeClass("inBlackMask");
 	});
 
-	
+	//********************************** Part 6 **********************************//
+	function animationContactContainer(){
+		var contactContainers = $(".contacts").children();
+		for (var i = 0; i < contactContainers.length; i++) {
+			contactContainers.eq(i).delay(200 + i * 60).animate({marginTop:'10px'},600);
+		}
+	}
+
 
 	// //********************************** Test: WorkPage **********************************//
 	// function resetWorkPage(){

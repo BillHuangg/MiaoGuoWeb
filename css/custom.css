@@ -206,8 +206,9 @@ body {
         -ms-filter: blur(8px); 
          -o-filter: blur(8px);   
             filter: blur(8px);  
-            /*filter: url(#blur-effect-1);*/
-            -webkit-transition: all 0.2s;
+            /*filter: url(#blur-effect-1);*/            
+            transition: filter 0s  ease-out;
+            -webkit-transition: -webkit-filter 0s  ease-out;
 }
 .outBlur{
 	z-index: 0;
@@ -217,7 +218,9 @@ body {
         -ms-filter: blur(0px); 
          -o-filter: blur(0px);   
             filter: blur(0px);  
-            -webkit-transition: all 0.2s;
+
+            transition: filter 0s  ease-out;
+            -webkit-transition: -webkit-filter 0s  ease-out;
 }
 
 .backgroundBlack{
@@ -345,13 +348,14 @@ body {
     _display:inline;  
     *display:inline;  
     zoom:1;  
-}
 
-.iconContainer:hover{
-	cursor: pointer;
+
+    margin-top: 160px;
 }
 
 .iconContainer img{
+	width: 43px;
+	height: auto;
 	margin-top: 28px;
 }
 
@@ -375,7 +379,29 @@ body {
 	display: none;
 }
 
+.iconContainerHover:hover{
+	/*cursor: pointer;*/
+	width: 124px;
+	height: 124px;
+	position: relative;
+	float: left;
+	margin: 13px 13px;
 
+	text-align: center;
+	background-color: #6ef1b5; 
+	-moz-border-radius: 62px; 
+	-webkit-border-radius: 62px; 
+	border-radius: 62px; 
+}
+.iconContainerHover:hover img{
+	width: 50px;
+	height: auto;
+	margin-top: 30px;
+}
+
+.iconContainerHover:hover .iconTitle{
+	font-size: 18px;
+}
 /*************************** Part 3 ***************************/
 #thirdPageRow{
 	margin-top: 10px;
@@ -436,18 +462,34 @@ body {
     _display:inline;  
     *display:inline;  
     zoom:1;  
+
 }
 
 .memberContainer img{
 	width: 114px;
 	height: 114px;
+
 	margin-top: 5px;
 	margin-bottom: 12px;
 
 	-moz-border-radius: 57px; 
 	-webkit-border-radius: 57px; 
-	border-radius: 57px; 
+	border-radius: 57px; 	
 }
+.memberContainer:hover img{
+	/*transform: scale(1.05);
+	-webkit-transform: scale(1.05);
+	-moz-transform: scale(1.05);
+	-ms-transform: scale(1.05);
+	-o-transform: scale(1.05);
+
+	transition: transform 0.25s ease-out;
+	-webkit-transition: transform 0.25s ease-out;
+	-moz-transition: transform 0.25s ease-out;
+	-ms-transition: transform 0.25s ease-out;
+	-o-transition: transform 0.25s ease-out;*/
+}
+
 
 .memberContainer:hover img{
 	margin-top: 0px;
@@ -458,7 +500,11 @@ body {
 	-webkit-border-radius: 62px; 
 	border-radius: 62px;
 	border: 5px solid #6ef1b5;
+
+	
 }
+
+
 
 .memberContainer a h5{
 	font-size: 16px;
@@ -618,113 +664,7 @@ body {
 }
 
 /*************************** Part 5 ***************************/
-#fifthPageRow{
-	margin-top: 10px;
-	margin-bottom: 100px;
-}
-
-#fifthPageTitleContainer{
-	padding-top: 12px;
-	padding-bottom: 6px;
-	padding-left: 4px;
-	padding-right: 4px;
-
-	width: 170px;
-	background-color: #000000;
-
-	color: #6ef1b5;
-	font-size: 24px;
-	font-family: 'LetterGothicStd-BoldSlanted';
-}
-
-/*.sencondPageParagraph{
-	margin-top: 5px;
-	margin-bottom: 30px;
-	font-size: 24px;
-	line-height: 44px;
-	font-family: 'DIN-Light';
-}*/
-.fifthPageParagraph{
-	padding: 2px;
-	margin-top: 5px;
-	margin-bottom: 30px;
-	font-size: 24px;
-	line-height: 44px;
-	font-family: 'DIN-Light';
-	color: #000000;
-}
-
-.fifthPageParagraph:hover{
-	color: #000000;
-	text-decoration: none;
-}
-
-.contacts{
-	text-align:center;  
-    margin:0 auto;  
-    padding:0;  
-    clear:both; 
-    width: 902px;
-}
-
-.contactContainer{
-	width: 262px;
-	height: 182px;
-	position: relative;
-	float: left;
-	margin: 10px 10px;
-
-	text-align: center;
-	background-color: #6ef1b5; 
-
-	/*margin:0;  */
-    padding:0;  
-    display:inline-block;  
-    _display:inline;  
-    *display:inline;  
-    zoom:1;  
-}
-
-#contactMiddleOne{
-	width: 318px;
-}
-
-.contactContainer:hover{
-	cursor: pointer;
-}
-
-.contactContainer img{
-	margin-top: 28px;
-}
-
-.contactTitle{
-	margin-top: 25px;
-	margin-bottom: 0px;
-
-	font-size: 16px;
-	font-family: 'NewOratorStd';
-	
-	font-weight: 100;
-}
-
-.contactContainer a{
-	color: #000000;
-}
-
-.contactContainer:hover a{
-	text-decoration: none;
-	color: #6ef1b5;
-}
-
-.contactContent{
-	margin-top: 0px;
-	font-size: 16px;
-	font-family: 'DIN-Bold';
-	font-weight: 100;
-}
-
-/*************************** Part 6 ***************************/
-#sixthPageCol{
+#fifthPageCol{
 	padding: 0;
 }
 
@@ -782,6 +722,22 @@ body {
 	background-position: center 0;
 	background-size: cover;
 	text-align: center;
+
+	overflow: hidden;
+}
+
+.workContainer:hover .workBGContainer{
+	transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+
+	/*transition: transform 0.25s ease-out;
+	-webkit-transition: -webkit-transform 0.25s ease-out;
+	-moz-transition: -moz-transform 0.25s ease-out;
+	-ms-transition: -ms-transform 0.25s ease-out;
+	-o-transition: -o-transform 0.25s ease-out;*/
 }
 
 .workBGContainer{
@@ -795,6 +751,12 @@ body {
 	background-position: center 0;
 	background-size: cover;
 	text-align: center;
+
+	/*transition: transform 0.25s ease-out;
+	-webkit-transition: -webkit-transform 0.25s ease-out;
+	-moz-transition: -moz-transform 0.25s ease-out;
+	-ms-transition: -ms-transform 0.25s ease-out;
+	-o-transition: -o-transform 0.25s ease-out;*/
 }
 
 .workContainer:hover{
@@ -892,8 +854,114 @@ body {
 }
 
 
+/*************************** Part 6 ***************************/
+#sixthPageRow{
+	margin-top: 10px;
+	margin-bottom: 100px;
+}
 
+#sixthPageTitleContainer{
+	padding-top: 12px;
+	padding-bottom: 6px;
+	padding-left: 4px;
+	padding-right: 4px;
 
+	width: 170px;
+	background-color: #000000;
+
+	color: #6ef1b5;
+	font-size: 24px;
+	font-family: 'LetterGothicStd-BoldSlanted';
+}
+
+/*.sencondPageParagraph{
+	margin-top: 5px;
+	margin-bottom: 30px;
+	font-size: 24px;
+	line-height: 44px;
+	font-family: 'DIN-Light';
+}*/
+.sixthPageParagraph{
+	padding: 2px;
+	margin-top: 5px;
+	margin-bottom: 30px;
+	font-size: 24px;
+	line-height: 44px;
+	font-family: 'DIN-Light';
+	color: #000000;
+}
+
+.sixthPageParagraph:hover{
+	color: #000000;
+	text-decoration: none;
+}
+
+.contacts{
+	text-align:center;  
+    margin:0 auto;  
+    padding:0;  
+    clear:both; 
+    width: 902px;
+}
+
+.contactContainer{
+	width: 262px;
+	height: 182px;
+	position: relative;
+	float: left;
+	margin: 10px 10px;
+
+	text-align: center;
+	background-color: #6ef1b5; 
+
+	/*margin:0;  */
+    padding:0;  
+    display:inline-block;  
+    _display:inline;  
+    *display:inline;  
+    zoom:1;  
+
+    margin-top: 160px;
+
+}
+
+#contactMiddleOne{
+	width: 318px;
+}
+
+.contactContainer:hover{
+	cursor: pointer;
+}
+
+.contactContainer img{
+	margin-top: 28px;
+}
+
+.contactTitle{
+	margin-top: 25px;
+	margin-bottom: 0px;
+
+	font-size: 16px;
+	font-family: 'NewOratorStd';
+	
+	font-weight: 100;
+}
+
+.contactContainer a{
+	color: #000000;
+}
+
+.contactContainer:hover a{
+	text-decoration: none;
+	color: #6ef1b5;
+}
+
+.contactContent{
+	margin-top: 0px;
+	font-size: 16px;
+	font-family: 'DIN-Bold';
+	font-weight: 100;
+}
 
 
 #embedVideo{
